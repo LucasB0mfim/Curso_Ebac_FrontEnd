@@ -5,29 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
 </head>
+
 <body>
-    <header>
+
+    <div class="front">
         <h1><strong>Cadastro de Formulário<strong></h1>
-    </header> 
-    <hr>
-    <p>
-        <h3>Por favor, preencha seus dados <br /> para se cadastrar:</h3>
-    </p>
-    
-    <label> <small>Nome</small> </label> <br />
-    <input type="text" placeholder="Seu nome" /> <br />
-    
-    <label> <small>Email</small> </label> <br />
-    <input type="email" placeholder="E-mail" /> <br />
-    
-    <label> <small>Senha</small> </label> <br />
-    <input type="password" placeholder="Senha" /> <br />
-    
-    <input type="checkbox" id="checkbox-termos" /> <label for="checkbox-termos"><small>Aceito todos os termos</small></label> <br /> <br />
-    <button type="submit">Cadastrar</button>
-    
-    <div class="imagem">
-        <img src="./high quality version _ Picardía _ Thumbs Up Emoji Man.png" width="320" height="205" />
     </div>
+
+    <div class="intro">
+        <p>Por favor, preencha seus dados no campo abaixo para se cadastrar!</p>
+    </div>
+
+    <div class="formulario">
+
+        <form>
+            <input type="text" placeholder="Seu nome" />
+            <br />
+            
+            <input type="email" id="email_usuario" placeholder="Email"> <label for="email_usuario"></label>
+            <br />
+            
+            <input type="password" id="senha_usuario" placeholder="Senha"> <label for="senha_usuario"></label>
+            <br />
+            
+            <input type="checkbox" id="termos" style="margin-top: 10px;"/> <label for="termos"><small>Aceitar os termos</small></label>
+            <br /> 
+            <br />
+            
+            <button type="submit">Cadastrar</button>
+        </form>
+
+    </div>
+
+    <div>
+        <img src="./high quality version _ Picardía _ Thumbs Up Emoji Man.png" width="180" style="margin-top: 20px;"/>    
+    </div>
+    
 </body>
 </html>
