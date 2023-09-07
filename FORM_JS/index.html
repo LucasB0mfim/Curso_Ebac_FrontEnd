@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <title>form</title>
+    
 </head>
 <body>
 
     <div class="conteiner">
         <h1>EBAC Banking</h1>
         <h2>Área de Transferência</h2>
-        <form id="formulario">
-            <input type="text" placeholder="CPF/CNPJ do beneficiado:" maxlength="11" minlength="11" required/>
-            <input id="valorA" type="number" placeholder="Valor a transferir:(A)" required/>
-            <input id="valorB" type="number" placeholder="Saldo em conta:(B)" required/>
-            <p class="mensagem_de_erro"> O valor de B tem que ser MAIOR que A</p>
-            <button type="submit"><b>TRANSFERIR</b></button>
-            <p class="CERTO"></p>
+        <form id="formulario_de_cadastro">
+            <input id="cpf-cnpj_do_usuario" type="text" placeholder="CPF/CNPJ do beneficiado:" maxlength="11" minlength="11" required/>
+            <input id="valor_campo_A" type="number" placeholder="Valor a transferir:(A)" required/>
+            <input id="valor_campo_B" type="number" placeholder="Saldo em conta:(B)"required/>
+            <p class="mensagem_de_erro">O Campo B precisa ser MAIOR que o campo A!</p>
+            <button id="btn" type="submit"><b>TRANSFERIR</b></button>
+            <p class="msg_sucesso"></p>
         </form>
     </div>
     

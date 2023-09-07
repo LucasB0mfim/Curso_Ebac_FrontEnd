@@ -1,37 +1,28 @@
-const form = document.getElementById ("formulario");
+const formulario = document.getElementById("formulario_de_cadastro");
+const cpfInput = document.getElementById("cpf-cnpj_do_usuario");
+const mensagemSucesso = document.querySelector(".msg_sucesso");
 
-//usado para adicionar um evento
-form.addEventListener("submit", function(e) {
-    //usado para cancelar a ação padrão do butão
-    e.preventDefault();
+formulario.addEventListener("submit", function(e) {
+    e.preventDefault(); // Impede o envio padrão do formulário
 
-    //criei duas constantes para os meus valores do campo A e B    
-    const VA = document.getElementById ("valorA");
-    const VB = document.getElementById ("valorB");
-    const MSG_SUCESSO = `Parabéns! Valor transferido.`;
+    const campoA = parseFloat(document.getElementById("valor_campo_A").value);
+    const campoB = parseFloat(document.getElementById("valor_campo_B").value);
 
-    //se o valor do campo A for MAIOR que o campo B o formulario é enviado
-    if (VA.value < VB.value) {
-        //criei uma constante chamada mensagem_de_sucesso e liguei ao <p> do html
-        const mensagem_de_sucesso = document.querySelector(".CERTO");
-        //agora eu liguei a constante a minha frase MSG_SUCESSO
-        mensagem_de_sucesso.innerHTML = MSG_SUCESSO;
-        //por fim. fiz com que ele aparece-se caso VB fosse maior que VA
-        mensagem_de_sucesso.style.display = "block";
-        //criei uma variável caso a pessoa erre na primeira vez, assim, o aviso de erro some
+    const mensagemDeSucesso = `Parabéns! O valor foi transferido com sucesso!`;
+
+//A função isNaN(Is Not-a-Number) retorna true se o valor passado para ela não for um número e falsese for um número válido. 
+//O "&&" é um operador lógico em JavaScript que representa a operação lógica "E".
+if (!isNaN(campoA) && !isNaN(campoB) && campoA < campoB) {
+        mensagemSucesso.innerHTML = mensagemDeSucesso;
+        mensagemSucesso.style.display = "block";
         document.querySelector(".mensagem_de_erro").style.display = "none";
-        VB.style.border = "";
+        cpfInput.value = "";
+        document.getElementById("valor_campo_A").value = "";
+        document.getElementById("valor_campo_B").value = "";
     } else {
-        VB.style.border = "2px solid red"
         document.querySelector(".mensagem_de_erro").style.display = "block";
-        const mensagem_de_sucesso = document.querySelector(".CERTO");
-        mensagem_de_sucesso.innerHTML = MSG_SUCESSO;
-        mensagem_de_sucesso.style.display = "none";
+        mensagemSucesso.style.display = "";
+        document.getElementById("valor_campo_A").value = "";
+        document.getElementById("valor_campo_B").value = "";
     }
-    
-    //depois que o formulario é enviado, o que tiver no campo é apagado
-    VA.value = "";
-    VB.value = "";
-})
-
-console.log(form);
+});
