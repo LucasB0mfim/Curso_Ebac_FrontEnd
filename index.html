@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agente de contatos - armazene seus contatos aqui!</title>
+    <link rel="shortcut icon" type="imagex/png" href="./imagens/livro_do_icon_maior.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="conteiner">
+
+        <header>
+            <img src="./imagens/livro.png" alt="livro">
+            <h1>Agenda de contatos</h1>
+        </header>
+        <form id="formulario-de-numeros">
+            <input id="nome-cadastro" type="text" placeholder="Qual o nome?"/>
+            <input id="numero-cadastro" type="text" placeholder="Qual o número?" minlength="11" maxlength="11" required/>
+            <button type="submit">Salvar +</button>
+        </form>
+
+        <table cellspacing="0"> 
+            <thead>
+                <tr>
+                    <td class="nome-contato">Nome do contato</td>
+                    <td class="numero-contato">Número do contato</td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
