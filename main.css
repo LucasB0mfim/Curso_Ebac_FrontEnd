@@ -91,19 +91,3 @@ footer {
     text-decoration: line-through;
     color: #fff;
 }
-
-/* img {
-    cursor: pointer;
-    height: 200px;
-    animation: flutter 5s
-    ease-in-out infinite;
-}
-
-@keyframes flutter {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-} */
