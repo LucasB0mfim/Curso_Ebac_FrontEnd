@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    padding: 8px;
+    padding: 10px;
     background-color: orangered;
     display: flex;
     justify-content: center;
