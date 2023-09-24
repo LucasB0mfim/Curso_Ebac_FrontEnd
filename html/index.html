@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBAC BANKING | ÁREA DE TRANSFERÊNCIA</title>
+    <link rel="shortcut icon" type="imagex/png" href="/icons/icon.png">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="conteiner">
+        <h1>EBAC Banking</h1>
+        <h2>Cadastro :</h2>
+        <form id="formulario_de_cadastro">
+            <input id="nome_do_usuario" type="text"  placeholder="Nome Completo:" required/>
+            <input id="email_do_usuario" type="email" placeholder="E-mail" required/>
+            <input id="telefone_do_usuario" type="text" placeholder="Telefone" minlength="11" required/>
+            <input id="cpf_do_usuario" type="text" placeholder="CPF:" minlength="11" required />
+            <input id="endereco_do_usuario" type="text" placeholder="Endereço:" required/>
+            <input id="cep_do_usuario" type="text" placeholder="CEP:" minlength="8" required/>
+            <input id="senha_do_usuario" type="number" placeholder="Senha:" required/>
+            <button id="btn" type="submit">CADASTRAR</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/js/jquery.mask.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

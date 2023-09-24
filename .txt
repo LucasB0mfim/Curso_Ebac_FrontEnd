@@ -1,0 +1,5 @@
+
+if (!formEValido) {
+    nomeBeneficiario.classList.add("error");
+    document.querySelector(".error_message").style.display = "block";
+}
