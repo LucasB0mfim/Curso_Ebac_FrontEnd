@@ -130,11 +130,13 @@ header ul li a {
         text-align: center;
     }
     .lista-de-produtos {
-        justify-content: space-between;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
     }
     .produtos {
-        max-width: 20%;
-        margin: 0 2%;
+        max-width: 49%;
+        margin: 0 3%;
     }
     .produtos img {
         width: 100%;
@@ -179,8 +181,8 @@ header ul li a {
     .produtos img {
         width: 100%;
     }
-    .produtos h2 {
-        font-size: 16px;
+    .lista-de-produtos .produtos h2 {
+        font-size: 12px;
     }
 }
 
@@ -282,14 +284,16 @@ header ul li a {
         justify-content: center;
     }
     .produtos {
-        max-width: 45%;
-        margin: 0 2%;
+        max-width: 322px;
     }
     .produtos img {
         width: 100%;
     }
     .lista-de-produtos .produtos h2 {
-        font-size: 18px;
+        font-size: 20px;
+    }
+    .lista-de-produtos .produtos p {
+        font-size: 12px;
     }
 }
 
@@ -328,7 +332,6 @@ header ul li a {
         margin-top: 30px;
     }
     .tênis .conteiner > h2 {
-        padding-left: 15px;
         font-size: 15px;
         color: rgb(82, 82, 252);
     }
@@ -338,19 +341,19 @@ header ul li a {
         justify-content: center;
     }
     .produtos {
-        max-width: 40%;
+        max-width: 95%;
         margin: 0 5%;
     }
     .produtos img {
         width: 100%;
     }
     .lista-de-produtos .produtos h2 {
-        font-size: 12px;
+        font-size: 18px;
     }
     .produtos p {
-        font-size: 8px;
+        font-size: 6px;
     }
     .produtos button {
-        font-size: 8px;
+        font-size: 10px;
     }
 }
