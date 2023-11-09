@@ -1,0 +1,48 @@
+@use "reset";
+
+body {
+    background-color: red;
+}
+
+.container {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    h1, h2 {
+        color: #fff;
+        font-size: 50px;
+        font-family: fantasy;
+        font-weight: normal;
+    }
+
+    button {
+        color: #fff;
+        border: 2px solid #fff;
+        background-color: red;
+        border-radius: 3px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-bottom: 50px;
+
+        &:hover {
+            background-color: rgb(255, 75, 75);
+            transition: all ease .3s;
+        }
+    }
+
+    img {
+        width: 300px;
+        opacity: 0;
+        transition: all linear 1.5s;
+    }
+    .alterar {
+        opacity: 1;
+    }
+}
