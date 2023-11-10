@@ -1,18 +1,18 @@
-@fontPrincipal: Roboto, sans-serif;
-@fontTitulo: Lobster, cursive;
-@corBranco: #fff;
-@corFundo: #eb3b5a;
-@corTextoButton: #000;
-@corFundoButton: #f7b731;
+@fontePrincipal: Roboto, sans-serif;
+@fonteDoTitulo: Lobster, cursive;
+@corDoTexto: #fff;
+@corDeFundo: #eb3b5a;
+@corDoTextoDoBotao: #000;
+@corDoFundoDoBotao: #f7b731;
 
 body {
-    background-color: @corFundo;
-    font-family: @fontPrincipal;
-    color: @corBranco;
+    background-color: #eb3b5a;
+    font-family: @fontePrincipal;
+    color: @corDoTexto;
 }
 
 h1 {
-    font-family: @fontTitulo;
+    font-family: @fonteDoTitulo;
     font-size: 3em;
 }
 
@@ -31,9 +31,9 @@ button {
     font-size: 1.3em;
     margin-top: 16px;
     border-radius: 8px;
-    background-color: @corFundoButton;
-    color: @corTextoButton;
-    font-family: @fontPrincipal;
+    background-color: @corDoFundoDoBotao;
+    color: @corDoTextoDoBotao;
+    font-family: @fontePrincipal;
 }
 
 input {
@@ -44,16 +44,16 @@ input {
     border: none;
     background-color: transparent;
     text-align: center;
-    color: @corBranco;
-    border-bottom: 6px solid @corBranco;
+    color: @corDoTexto;
+    border-bottom: 6px solid @corDoTexto;
 }
 
 .resultado {
     padding: 16px;
     margin-top: 120px;
-    border: 8px dotted #fff;
+    border: 8px dotted @corDoTexto;
     display: none;
-
+    
     span {
         font-weight: bold;
         font-size: 3em;
