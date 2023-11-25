@@ -1,0 +1,82 @@
+@use 'variables';
+@use 'reset';
+
+.person {
+    padding: 5.6vw;
+    margin: 0 auto;
+    max-width: 90%;
+    width: 100%;
+
+    &__content {
+        margin-top: 80px;
+
+        &__hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 300px;
+            
+            &__image {
+                width: 400px;
+                border-radius: 8px;
+            }
+
+            &__phrase {
+                width: 600px;
+                font-size: 20px;
+                text-align: left;
+                color: variables.$text;
+                text-transform: uppercase;
+                font-family: 'one', sans-serif;
+                letter-spacing: 1px;
+            }
+
+            &--is-revert {
+                flex-direction: row-reverse;
+            }
+
+            &--is-last {
+                padding-bottom: 0;
+                margin-bottom: 100px;
+            }
+        }
+    }
+
+    &__questions {
+        display: flex;
+        justify-content: center;
+        font-family: 'race', sans-serif;
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .person {
+        margin: 0 auto;
+        padding-top: 170px;
+        &__content {
+
+            &__hero {
+                flex-direction: column;
+                padding-bottom: 100px;
+                &__image {
+                    max-width: 200px;
+                }
+                &__phrase {
+                    font-size: 10px;
+                    max-width: 90%;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+                &--is-last {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        
+        &__questions {
+            font-size: 30px;
+            text-align: center;
+        }
+    }
+}

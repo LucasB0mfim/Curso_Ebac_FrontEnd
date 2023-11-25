@@ -1,0 +1,48 @@
+@use 'variables';
+@use 'reset';
+
+.hero {
+    background-image: url(../../dist/images/Batman.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 400px;
+    background-position-y: 140%;
+    padding: 5.6vw;
+    margin: 0 auto;
+    max-width: 90%;
+    width: 100%;
+
+    &__content {
+        max-width: 600px;
+        
+        &__questions {
+            font-size: 18px;
+            font-weight: lighter;
+            font-family: 'Roboto', sans-serif;
+            letter-spacing: .5px;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            height: 30vw;
+            color: variables.$text;
+        }
+    }
+
+}
+@media (max-width: 768px) {
+    .hero {
+        margin: 0 auto;
+        background-size: 150px;
+        background-position-y: 10%;
+        background-position: center;
+
+        &__content {
+
+            &__questions {
+                font-size: 12px;
+                text-align: center;
+                margin-top: 150px;
+            }
+        }
+    }
+}
