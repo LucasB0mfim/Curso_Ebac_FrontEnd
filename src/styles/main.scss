@@ -1,0 +1,12 @@
+@use 'components/header';
+@use 'components/news';
+@use 'components/title';
+@use 'components/timeForDate';
+@use 'components/footer';
+@use 'reset';
+@use 'variables';
+
+.red {
+    color: variables.$corPrincipal;
+    font-weight: bold;
+}

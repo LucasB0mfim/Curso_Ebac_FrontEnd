@@ -1,0 +1,25 @@
+@use '../variables.scss';
+
+.news {
+    max-width: 700px;
+    width: 100%;
+    margin: 80px auto 40px auto;
+    
+    &__descriptions {
+        font-size: 20px;
+        font-weight: normal;
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 768px) {
+    .news {
+        max-width: 90%;
+        width: 100%;
+        margin: 0 auto;
+
+        &__descriptions {
+            font-size: 18px;
+            margin-bottom: 24px;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@use '../variables.scss';
+
+.title {
+    max-width: 900px;
+    width: 100%;
+    margin: 40px auto 10px auto;
+    
+    &__title {
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 1.1;
+    }
+    
+    &__description {
+        margin-top: 24px;
+        font-size: 20px;
+        text-align: center;
+        color: variables.$corParagrafo;
+    }
+
+    &__by {
+        margin: 32px 0;
+        color: variables.$corParagrafo;
+    }
+
+    &__borderBottom {
+        border-bottom: 1px solid #ccc;
+    }
+
+}
+@media (max-width: 678px) {
+    .title {
+        max-width: 90%;
+        width: 100%;
+        margin: 40px auto;
+
+        &__title {
+            font-size: 26px;
+            text-align: left;
+        }
+
+        &__description {
+            font-size: 16px;
+            text-align: left;
+        }
+    }
+}

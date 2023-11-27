@@ -1,0 +1,23 @@
+@use '../variables.scss';
+
+.footer {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: variables.$corPrincipal;
+
+    &__image {
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px;
+    
+        &__image {
+            height: 40px;
+        }
+    }
+}

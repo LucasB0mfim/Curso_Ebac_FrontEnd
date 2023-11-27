@@ -1,0 +1,24 @@
+@use '../variables.scss';
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 74px;
+    background-color: variables.$corPrincipal;
+
+    &__image {
+        height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 60px;
+        
+        &__image {
+            height: 40px;
+        }
+    }
+
+}

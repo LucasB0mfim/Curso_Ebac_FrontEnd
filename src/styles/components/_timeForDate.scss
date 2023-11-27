@@ -1,0 +1,36 @@
+@use '../variables.scss';
+
+.timeForDate {
+    max-width: 640px;
+    width: 100%;
+    margin: 40px auto 80px auto;
+    
+    &__title {
+        text-align: center;
+        font-size: 48px;
+    }
+
+    &__contador {
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeForDate {
+        max-width: 90%;
+        width: 100%;
+        margin: 40px auto;
+        
+        &__title {
+            text-align: center;
+            font-size: 28px;
+        }
+    
+        &__contador {
+            font-size: 18px;
+        }
+    }
+}
