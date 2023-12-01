@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    padding: 20vh;
+    background-color: rgb(3, 168, 168);
+    
+    .container {
+        max-width: 640px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        
+        input,
+        button {
+            width: 50%;
+            height: 25px;
+            border: 1px solid #000;
+            border-radius: 8px;
+            outline: none;
+            transition: all linear .2s;
+        }
+        
+        input {
+            margin-bottom: 5px;
+            padding-left: 10px;
+        }
+
+        button {
+            cursor: pointer;
+            
+            &:hover {
+                background-color: #d4d4d4;
+                transition: all linear .2s;
+            }
+        }
+    }
+
+}
+@media (max-width: 500px) {
+    header {
+        padding: 0;
+        height: 414px;
+        .container {
+            max-width: 80%;
+            width: 100%;
+            padding-top: 15vh;
+            
+            input,
+            button {
+                width: 100%;
+                height: 30px;
+                border-radius: 4px;
+            }
+
+            input {
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+.info {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+
+    #avatar {
+        border-radius: 50%;
+        height: 200px;
+        display: flex;
+        margin: 0 auto;
+        position: relative;
+        top: -100px;
+    }
+
+    #nickName {
+        position: relative;
+        top: -90px;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+
+    .box {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        top: -50px;
+
+        .seguidores {
+            margin: 0 50px;
+        }
+
+        p {
+            width: 90px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .size {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+    }
+    
+    #url {
+        position: relative;
+        top: -30px;
+        width:25%;
+        height: 30px;
+        outline: none;
+        border: 1px solid #000;
+        border-radius: 4px;
+        background-color: rgb(3, 168, 168);
+        cursor: pointer;
+        transition: all linear 0.2s;
+        
+        &:hover {
+            background-color: rgb(3, 143, 143);
+            transition: all linear 0.2s;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+    }
+}
+
+.display-none {
+    display: none;
+}
