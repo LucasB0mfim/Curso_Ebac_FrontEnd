@@ -26,7 +26,8 @@ function compilarSass() {
         .pipe(gulp.dest('./build/styles'))
 };
 
-exports.default = function() {
+exports.default = gulp.parallel(comprimirImagem, comprimirJavaScript, compilarSass);
+exports.watch = function() {
     gulp.watch('./source/images/*', {ignoreInitial: false}, gulp.series(comprimirImagem));
     gulp.watch('./source/scripts/*.js', {ignoreInitial: false}, gulp.series(comprimirJavaScript));
     gulp.watch('./source/styles/*.scss', {ignoreInitial: false}, gulp.series(compilarSass));
