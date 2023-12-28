@@ -1,0 +1,34 @@
+.input, .inputb {
+    width: 300px;
+    height: 50px;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.inputb {
+    text-align: center;
+    padding: 0;
+}
+
+.btn {
+    width: 150px;
+    border: 1px solid #ccc;
+    transition: all linear .2s;
+}
+
+.btn:hover {
+    background-color: #c4c4c4;
+    transition: all linear .2s;
+}
+
+.resultado {
+    border: 1px solid #ccc;
+    height: 60px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

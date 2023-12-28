@@ -1,0 +1,43 @@
+.info {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 208px;
+    height: 80px;
+    padding: 7px;
+    border: 1px solid #009EDF;
+    border-radius: 40px;
+}
+
+.text {
+    font-size: 11.5px;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+.paragraph {
+    font-size: 12px;
+    cursor: pointer;
+    color: #000;
+    margin-bottom: 0;
+}
+
+.description {
+    margin-left: 8px;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+.banners {
+    height: 200px;
+    margin-left: 20px;
+}
+
+.banners2 {
+    margin-top: 10px;
+    height: 200px;
+    margin-left: 20px;
+}

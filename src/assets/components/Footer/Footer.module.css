@@ -1,0 +1,29 @@
+.footer {
+    background-color: #009edf;
+}
+
+.p {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+}
+
+.input {
+    width: 536px;
+    height: 64px;
+    padding: 8px 20px 8px 8px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 28px;
+    border: none;
+}
+
+.btn {
+    height: 55px;
+    width: 100px;
+    border: none;
+    border-radius: 25px;
+    background-color: #53C052;
+    margin-left: -105px;
+}

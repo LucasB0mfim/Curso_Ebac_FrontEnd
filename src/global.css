@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.bom {
+    border: 2px solid rgb(110, 184, 1);
+}
+
+.ruim {
+    border: 2px solid red;
+}
