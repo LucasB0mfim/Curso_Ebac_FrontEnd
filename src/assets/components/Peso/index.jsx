@@ -90,9 +90,9 @@ const Peso = () => {
     }, []); // O array vazio [] significa que este efeito será executado apenas uma vez durante a montagem do componente
 
     useEffect(() => {
-        // Selecione o campo de entrada de altura e aplique a máscara usando jQuery
-        document.getElementById('#altura').mask('0.00');
-    }, []);
+    // Selecione o campo de entrada de altura e aplique a máscara usando jQuery
+    $('#altura').mask('0.00');
+}, []);
 
     return (
         <>
