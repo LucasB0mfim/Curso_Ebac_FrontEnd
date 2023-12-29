@@ -50,6 +50,10 @@ const Peso = () => {
     };
 
     useEffect(() => {
+        $('#altura').mask('0.00');
+    }, []);
+
+    useEffect(() => {
         const resultadoElement = document.getElementById('resultado');
 
         if (resultadoElement) {
