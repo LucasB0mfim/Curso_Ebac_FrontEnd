@@ -18,49 +18,49 @@ const Slide = () => {
             <div id='carousel-exemplo' className='carousel carousel-fade slide' data-bs-ride='carousel'>
                 <div className='carousel-inner'>
             
-                    <div data-bs-interval="3000" class="carousel-item active">
+                    <div data-bs-interval="3000" className="carousel-item active">
                         <img className = { styles.slide } src = { slide1 } />
                     </div>
                     
-                    <div data-bs-interval="3000" class="carousel-item">
+                    <div data-bs-interval="3000" className="carousel-item">
                         <img className = { styles.slide } src = { slide2 } />
                     </div>
 
-                    <div data-bs-interval="3000" class="carousel-item">
+                    <div data-bs-interval="3000" className="carousel-item">
                         <img className = { styles.slide } src = { slide3 } />
                     </div>
 
-                    <div data-bs-interval="3000" class="carousel-item">
+                    <div data-bs-interval="3000" className="carousel-item">
                         <img className = { styles.slide } src = { slide4 } />
                     </div>
 
-                    <div data-bs-interval="3000" class="carousel-item">
+                    <div data-bs-interval="3000" className="carousel-item">
                         <img className = { styles.slide } src = { slide5 } />
                     </div>
 
-                    <div data-bs-interval="3000" class="carousel-item">
+                    <div data-bs-interval="3000" className="carousel-item">
                         <img className = { styles.slide } src = { slide6 } />
                     </div>
 
-                    <div data-bs-interval="3000" class="carousel-item">
+                    <div data-bs-interval="3000" className="carousel-item">
                         <img className = { styles.slide } src = { slide7 } />
                     </div>
 
-                    <div data-bs-interval="3000" class="carousel-item">
+                    <div data-bs-interval="3000" className="carousel-item">
                         <img className = { styles.slide } src = { slide8 } />
                     </div>
 
-                    <div data-bs-interval="3000" class="carousel-item">
+                    <div data-bs-interval="3000" className="carousel-item">
                         <img className = { styles.slide } src = { slide9 } />
                     </div>
 
-                    <div data-bs-interval="3000" class="carousel-item">
+                    <div data-bs-interval="3000" className="carousel-item">
                         <img className = { styles.slide } src = { slide10 } />
                     </div>
 
                 </div>
 
-                <div class="carousel-indicators">
+                <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
                     <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
                     <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
