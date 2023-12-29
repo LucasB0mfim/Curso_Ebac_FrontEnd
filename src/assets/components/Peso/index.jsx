@@ -75,7 +75,7 @@ const Peso = () => {
     }, [resultadoIMC, classificacao]);
 
     useEffect(() => {
-        $('#peso').mask('0.00', { reverse: true });
+        $('#altura').mask('0.00', { reverse: true });
         
         const apertarEnter = (event) => {
             // Verifica se a tecla pressionada é a tecla Enter (código 13)
