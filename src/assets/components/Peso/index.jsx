@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './Peso.module.css';
+import $ from 'jquery';
+import 'jquery-mask-plugin';
 
 const Peso = () => {
     const [resultadoIMC, setResultadoIMC] = useState(null);
@@ -73,6 +75,8 @@ const Peso = () => {
     }, [resultadoIMC, classificacao]);
 
     useEffect(() => {
+        $('#peso').mask('0.00', { reverse: true });
+        
         const apertarEnter = (event) => {
             // Verifica se a tecla pressionada é a tecla Enter (código 13)
             if (event.key === 'Enter') {
