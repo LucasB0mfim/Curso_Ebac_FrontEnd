@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './Peso.module.css';
+import '../../../scripts/jquery.mask.min.js';
 
 const Peso = () => {
     const [resultadoIMC, setResultadoIMC] = useState(null);
