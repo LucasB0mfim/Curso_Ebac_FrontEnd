@@ -4,6 +4,7 @@ import styles from './Peso.module.css';
 const Peso = () => {
     const [resultadoIMC, setResultadoIMC] = useState(null);
     const [inputError, setInputError] = useState(false);
+    const [classificacao, setClassificacao] = useState('');
 
     const calcularIMC = () => {
         const peso = parseFloat(document.getElementById('peso').value);
@@ -27,23 +28,66 @@ const Peso = () => {
 
         setResultadoIMC(imc.toFixed(2));
         setInputError(false);
+
+        // Atualiza a classificação com base no valor do IMC
+        if ( imc < 16 ) {
+            setClassificacao('Magreza Grau III');
+        } else if (imc >= 16 && imc <= 16.9 ) {
+            setClassificacao('Magreza Grau II');
+        } else if ( imc >= 17 && imc <= 18.4 ) {
+            setClassificacao('Magreza Grau I');
+        } else if ( imc >= 18.5 && imc <= 24.9 ) {
+            setClassificacao('Adequado');
+        } else if ( imc >= 25 && imc <= 29.9 ) {
+            setClassificacao('Pré Obeso');
+        } else if ( imc >= 30 && imc <= 34.9 ) {
+            setClassificacao('Obesidade Grau I');
+        } else if ( imc >= 35 && imc <= 39.9 ) {
+            setClassificacao('Obesidade Grau II');
+        } else {
+            setClassificacao('Obesidade Grau III');
+        }
     };
 
     useEffect(() => {
         const resultadoElement = document.getElementById('resultado');
+
         if (resultadoElement) {
             if (resultadoIMC !== null && !isNaN(resultadoIMC)) {
                 const imcValue = parseFloat(resultadoIMC);
-                if (imcValue >= 19 && imcValue <= 25) {
+                if (imcValue >= 18.5 && imcValue <= 24.9) {
                     resultadoElement.classList.remove('ruim');
                     resultadoElement.classList.add('bom');
+                } else if (imcValue > 25) {
+                    resultadoElement.classList.remove('bom');
+                    resultadoElement.classList.add('ruim');
                 } else {
                     resultadoElement.classList.remove('bom');
                     resultadoElement.classList.add('ruim');
                 }
+
+                // Atualiza a classificação dentro do resultado
+                resultadoElement.innerHTML = `IMC: ${resultadoIMC}<br>Classificação: ${classificacao}`;
             }
         }
-    }, [resultadoIMC]);
+    }, [resultadoIMC, classificacao]);
+
+    useEffect(() => {
+        const apertarEnter = (event) => {
+            // Verifica se a tecla pressionada é a tecla Enter (código 13)
+            if (event.key === 'Enter') {
+                calcularIMC();
+            }
+        };
+    
+        // Adiciona o ouvinte de eventos ao documento
+        document.addEventListener('keydown', apertarEnter);
+    
+        // Remove o ouvinte de eventos ao desmontar o componente para evitar vazamentos de memória
+        return () => {
+            document.removeEventListener('keydown', apertarEnter);
+        };
+    }, []); // O array vazio [] significa que este efeito será executado apenas uma vez durante a montagem do componente
 
     return (
         <>
@@ -58,7 +102,7 @@ const Peso = () => {
                 </button>
             </div>
             <div className="container d-flex justify-content-center fs-4">
-                <p id="resultado" className={`m-0 mb-5 fs-5 ${styles.resultado}`}>
+                <p id="resultado" className={`m-0 mb-5 ${styles.resultado}`}>
                     {resultadoIMC && `IMC: ${resultadoIMC}`}
                 </p>
             </div>
