@@ -96,7 +96,7 @@ const Peso = () => {
             </div>
             <div className={`container d-flex justify-content-center mb-5 mt-5 ${inputError ? styles.error : ''}`}>
                 <input type="text" placeholder="Seu peso em kg" id="peso" className={styles.inputb} />
-                <input type="text" placeholder="Sua altura em metros" id="altura" className={styles.inputb} />
+                <input type="text" placeholder="Sua altura em metros ex: 1.56" id="altura" className={styles.inputb} />
                 <button type="button" onClick={calcularIMC} className={styles.btn}>
                     Descobrir
                 </button>
