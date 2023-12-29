@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react';
 import styles from './Peso.module.css';
-import '../../../scripts/jquery.mask.min.js';
 
 const Peso = () => {
     const [resultadoIMC, setResultadoIMC] = useState(null);
     const [inputError, setInputError] = useState(false);
     const [classificacao, setClassificacao] = useState('');
-    $('#altura').mask('0.00');
 
     const calcularIMC = () => {
         const peso = parseFloat(document.getElementById('peso').value);
