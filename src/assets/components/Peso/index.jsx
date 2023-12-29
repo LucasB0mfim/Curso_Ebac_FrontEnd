@@ -91,7 +91,7 @@ const Peso = () => {
 
     useEffect(() => {
         // Selecione o campo de entrada de altura e aplique a máscara usando jQuery
-        $('#altura').mask('0.00');
+        document.getElementById('#altura').mask('0.00');
     }, []);
 
     return (
